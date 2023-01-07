@@ -1,0 +1,7 @@
+baseURL = 'https://thelio.carlboettiger.info/files/cboettig/quarto-hugo-material-dashboard/public/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'material-kit5'
+[markup.goldmark.renderer]
+unsafe= true
+publishdir = "docs"

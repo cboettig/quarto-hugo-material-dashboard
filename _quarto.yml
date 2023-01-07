@@ -1,5 +1,6 @@
 project:
   title: "quarto-project-template"
-
-
+  render:
+    - "*.qmd"
+    - "!internal/"
 
