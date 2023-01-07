@@ -4,3 +4,9 @@
 .Ruserdata
 
 /.quarto/
+
+public
+resources
+index_files
+index.html
+*.lock

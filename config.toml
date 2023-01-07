@@ -4,4 +4,3 @@ title = 'My New Hugo Site'
 theme = 'material-kit5'
 [markup.goldmark.renderer]
 unsafe= true
-publishdir = "docs"
