@@ -8,5 +8,36 @@ Hello Carl
 
 ```{r}
 library(tidyverse)
-ggplot(mtcars, aes(disp, mpg)) + geom_point()
+library(ggthemes)
+library(ggiraph)
+ ggplot(economics_long, aes(date, value01, colour = variable)) + 
+  geom_line() + theme_tufte() + theme(panel.background = element_rect(fill = "pink") )
+girafe(ggobj = p)
+
+```
+
+```{r}
+library(bslib)
+library(bsicons)
+library(shiny)
+library(htmltools)
+card(
+  card_header(
+    class = "bg-dark",
+    "A header"
+  ),
+  card_body(
+    markdown("Some text with a [link](https://github.com)")
+  )
+)
+```
+
+```{r}
+value_box(
+  title = "I got", 
+  value = "99 problems",
+  showcase = bs_icon("music-note-beamed"),
+  p("bslib ain't one", bs_icon("emoji-smile")),
+  p("hit me", bs_icon("suit-spade"))
+)
 ```
