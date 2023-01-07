@@ -6,21 +6,32 @@ format: hugo-md
 
 Hello Carl
 
-```{r}
+```{r  include=FALSE, message=FALSE}
 library(tidyverse)
 library(ggthemes)
 library(ggiraph)
- ggplot(economics_long, aes(date, value01, colour = variable)) + 
-  geom_line() + theme_tufte() + theme(panel.background = element_rect(fill = "pink") )
-girafe(ggobj = p)
+```
+
+
+```{r}
+ggpobj = ggplot(economics, aes(date, unemploy)) + geom_line(col="white") + geom_point(col="white") +
+  theme(panel.background = element_rect(fill = "#e93a76",
+                                        color=NA),
+        plot.background = element_rect(fill=rgb(0,0,0,0),color=NA),
+        axis.text=element_blank()) + xlab("") + ylab("")
+girafe(ggobj = ggpobj, width=4,height=2)
 
 ```
 
-```{r}
+```{r include=FALSE, message=FALSE}
 library(bslib)
 library(bsicons)
 library(shiny)
 library(htmltools)
+```
+
+
+```{r}
 card(
   card_header(
     class = "bg-dark",
@@ -33,11 +44,8 @@ card(
 ```
 
 ```{r}
-value_box(
-  title = "I got", 
+value_box(title="",
   value = "99 problems",
-  showcase = bs_icon("music-note-beamed"),
-  p("bslib ain't one", bs_icon("emoji-smile")),
-  p("hit me", bs_icon("suit-spade"))
+  showcase = bs_icon("music-note-beamed")
 )
 ```
