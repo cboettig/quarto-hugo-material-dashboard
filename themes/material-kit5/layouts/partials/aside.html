@@ -12,7 +12,7 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
           <li class="nav-item">
-            <a class="nav-link text-white {{ if $currentPage.IsMenuCurrent "main" . }}active bg-gradient-primary{{ end }}" href="{{ .URL | relURL }}">
+            <a class="nav-link text-white {{ if $currentPage.IsMenuCurrent "main" . }}active bg-gradient-primary{{ end }}" href="{{ .URL  }}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 {{.Pre}}
               </div>
