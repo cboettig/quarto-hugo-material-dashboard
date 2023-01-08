@@ -18,4 +18,9 @@
   <!-- CSS Files -->
   {{ $styles := resources.Get "material-dashboard.scss" | resources.ExecuteAsTemplate "material-dashboard.scss" . | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" id="pagestyle">
+  
+  <!-- ggiraph CSS-->
+  <link href="{{ "css/ggiraphjs.min.css" | relURL }}" rel="stylesheet" />
+  <link href="{{ "css/htmltools-fill-0.5.4/fill.css" | relURL }}" rel="stylesheet" />
+
 </head>

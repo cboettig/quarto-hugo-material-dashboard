@@ -4,48 +4,70 @@ date: 2023-01-06T22:41:59Z
 format: hugo-md
 ---
 
-Hello Carl
+Hello Everyone
 
 ```{r  include=FALSE, message=FALSE}
 library(tidyverse)
-library(ggthemes)
+#library(ggthemes)
 library(ggiraph)
-```
-
-
-```{r}
-ggpobj = ggplot(economics, aes(date, unemploy)) + geom_line(col="white") + geom_point(col="white") +
-  theme(panel.background = element_rect(fill = "#e93a76",
-                                        color=NA),
-        plot.background = element_rect(fill=rgb(0,0,0,0),color=NA),
-        axis.text=element_blank()) + xlab("") + ylab("")
-girafe(ggobj = ggpobj, width=4,height=2)
-
-```
-
-```{r include=FALSE, message=FALSE}
-library(bslib)
-library(bsicons)
 library(shiny)
 library(htmltools)
+library(thematic)
+library(bslib)
+library(bsicons)
+knitr::opts_chunk$set(echo=FALSE)
 ```
 
 
 ```{r}
-card(
-  card_header(
-    class = "bg-dark",
-    "A header"
-  ),
-  card_body(
-    markdown("Some text with a [link](https://github.com)")
-  )
-)
+ggobj1 = ggplot(economics, aes(date, unemploy)) + geom_line(col="white") + geom_point(col="white") +
+  theme(panel.background = element_rect(fill = "#e93a76",
+                                        color=NA),
+        plot.background = element_rect(fill="#e93a76",color=NA),
+        axis.text=element_blank()) + xlab("") + ylab("")
+js1 <- girafe(ggobj = ggobj1)
+
 ```
 
+
+
 ```{r}
-value_box(title="",
-  value = "99 problems",
-  showcase = bs_icon("music-note-beamed")
+ggobj2 = ggplot(economics, aes(date, unemploy)) + geom_line(col="white") + geom_point(col="white") +
+  theme(panel.background = element_rect(fill = "#5fb663",
+                                        color=NA),
+        plot.background = element_rect(fill="#5fb663",color=NA),
+        axis.text=element_blank()) + xlab("") + ylab("")
+js2 <- girafe(ggobj = ggobj2)
+```
+
+
+```{r}
+ggobj3 = ggplot(economics, aes(date, unemploy)) + geom_line(col="white") + geom_point(col="white") +
+  theme(panel.background = element_rect(fill = "#2d2d31",
+                                        color=NA),
+        plot.background = element_rect(fill="#2d2d31",color=NA),
+        axis.text=element_blank()) + xlab("") + ylab("")
+js3 <- girafe(ggobj = ggobj3)
+```
+
+
+
+```{r}
+card1 <- card(card_header("Chart 1"),
+              card_body_fill(class = "p-0",
+                             js1))
+
+card2 <- card(card_header("Chart 2"),
+              card_body_fill(class = "p-0",
+                             js2))
+card3 <- card(card_header("Chart 3"),
+              card_body_fill(class = "p-0",
+                             js3))
+
+div(class="row",
+  div(class="col", card1),
+  div(class="col", card2),
+  div(class="col", card3)
 )
+
 ```
