@@ -1,0 +1,1 @@
+Sitemap: https://github.com/cboettig/quarto-hugo-material-dashboard/sitemap.xml
