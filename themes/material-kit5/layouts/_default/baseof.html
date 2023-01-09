@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  {{ partial "nav.html" . }}
+  <body class="g-sidenav-show bg-gray-100">
+  
+  {{ block "header" . }}
+  {{ end }}
+  
+  {{ block "main" . }}
+  {{ end }}
+
+  {{ partial "footer" . }}
+  </body>
+</html>

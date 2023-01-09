@@ -1,0 +1,18 @@
+name = "material-kit5"
+license = "CC-BY-4.0"
+licenselink = "https://github.com/cboettig/material-kit5/blob/master/LICENSE.md"
+description = "Material-kit dashboard with bootstrap 5."
+#homepage = "https://hugo-apero.netlify.app"
+tags = ["dashboard", "responsive", "bootstrap"]
+min_version = "0.79.0"
+
+# If the theme has a single author
+[author]
+    name = "Carl Boettiger"
+    homepage = "https://carlboettiger.info"
+
+# If porting an existing theme
+[original]
+    author = "Creative Tim"
+    homepage = "https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard"
+    repo = "https://github.com/creativetimofficial/material-dashboard"

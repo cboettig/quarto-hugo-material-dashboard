@@ -1,0 +1,103 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Material Dashboard 3'
+theme = 'material-kit5'
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true  # Enable user to embed HTML snippets in Markdown content.
+    hardwraps = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 2
+    ordered = false
+  [markup.highlight]
+    # one of: https://xyproto.github.io/splash/docs/ 
+    style = "github"
+    
+    
+[params]
+  logo = "img/logo-ct.png"
+  description = "Material Kit5 Dashboard for Quarto with Hugo"
+  mastodon = "cboettig"
+  github="cboettig"
+  repo="https://github.com/cboettig/quarto-hugo-material-dashboard"
+  date_format = "Mon, Jan 2, 2006"
+  credits = '''
+  Adapted by <a href="https://carlboettiger.info" class="font-weight-bold" target="_blank">
+  Carl Boettiger</a> for Hugo + Quarto, with <i class="fa fa-heart"></i> from 
+  <a href="https://www.creative-tim.com">Creative Tim</a>.
+            '''
+
+
+[menu]
+  # Configure main menu (aside bar)  
+  [[menu.header]]
+    name = "About"
+    url = "http://carlboettiger.info"
+    weight = 1
+  [[menu.header]]
+    pre =  '<i class="fa fa-user me-sm-1"></i>'
+    name = "Users"
+    url = "http://carlboettiger.info"
+    weight = 2
+
+  # Configure main menu (aside bar)  
+
+  [[menu.main]]
+    pre = '<i class="material-icons opacity-10">table_view</i>'
+    name = "Tables"
+    url = "https://demos.creative-tim.com/material-dashboard/pages/tables.html"
+    weight = 2
+  [[menu.main]]
+    pre = '<i class="material-icons opacity-10">receipt_long</i>'
+    name = "Billing"
+    url = "https://demos.creative-tim.com/material-dashboard/pages/billing.html"
+    weight = 3
+  [[menu.main]]
+    pre = '<i class="material-icons opacity-10">view_in_ar</i>'
+    name = "Virtual Reality"
+    url = "https://demos.creative-tim.com/material-dashboard/pages/virtual-reality.html"
+    weight = 4
+  [[menu.main]]
+    pre = '<i class="material-icons opacity-10">format_textdirection_r_to_l</i>'
+    name = "RTL"
+    url = "https://demos.creative-tim.com/material-dashboard/pages/rtl.html"
+    weight = 5
+  [[menu.main]]
+    pre = '<i class="material-icons opacity-10">notifications</i>'
+    name = "Notifications"
+    url = "https://demos.creative-tim.com/material-dashboard/pages/notifications.html"
+    weight = 6
+  [[menu.main]]
+    weight = 7
+    [menu.main.params]
+      heading = "Account pages"
+  [[menu.main]]
+    pre = '<i class="material-icons opacity-10">person</i>'
+    name = "Profile"
+    url = "https://demos.creative-tim.com/material-dashboard/pages/profile.html"
+    weight = 8
+  [[menu.main]]
+    pre = '<i class="material-icons opacity-10">login</i>'
+    name = "Sign In"
+    url = "https://demos.creative-tim.com/material-dashboard/pages/login.html"    
+    weight = 9
+  [[menu.main]]
+    pre = '<i class="material-icons opacity-10">assignment</i>'
+    name = "Sign Up"
+    url = "https://demos.creative-tim.com/material-dashboard/pages/sign-up.html"
+    weight = 10
+
+      
+  [[menu.footer]]
+    weight = 1
+    name = "Creative Tim"
+    url = "https://www.creative-tim.com"
+  [[menu.footer]]
+    weight = 2
+    name = "License"
+    url = "https://www.creative-tim.com/license"
+  
+                      

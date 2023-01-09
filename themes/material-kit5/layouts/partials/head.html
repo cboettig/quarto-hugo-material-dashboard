@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ "img/apple-icon.png" | relURL }}">
+  <link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
+  <title>
+    Material Dashboard 2 by Creative Tim
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="{{ "css/nucleo-icons.css" | relURL }}" rel="stylesheet" />
+  <link href="{{ "css/nucleo-svg.css" | relURL }}" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  {{ $styles := resources.Get "material-dashboard.scss" | resources.ExecuteAsTemplate "material-dashboard.scss" . | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" id="pagestyle">
+  
+  <!-- ggiraph CSS-->
+  <link href="{{ "css/ggiraphjs.min.css" | relURL }}" rel="stylesheet" />
+  <link href="{{ "css/htmltools-fill-0.5.4/fill.css" | relURL }}" rel="stylesheet" />
+
+</head>

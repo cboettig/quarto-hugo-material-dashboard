@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body class="g-sidenav-show  bg-gray-200">
+  {{ partial "aside.html" . }}
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    {{ partial "nav.html" }}
+    <div class="container-fluid py-4">
+    {{ .Content }}
+    {{ partial "footer.html" . }}
+    </div>
+  </main>
+{{ partial "fixed-plugin.html" . }}  
+{{ partial "javascript.html" . }}
+</body>
+
+</html>
