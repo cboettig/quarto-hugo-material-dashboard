@@ -1,4 +1,4 @@
-baseURL = 'https://thelio.carlboettiger.info/files/cboettig/quarto-hugo-material-dashboard/public/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'Material Dashboard 3'
 theme = 'material-kit5'
