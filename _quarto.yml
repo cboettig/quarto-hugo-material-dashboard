@@ -4,4 +4,4 @@ project:
   render:
     - "*.qmd"
     - "!public/"
-
+    - "content/_index.qmd"

@@ -1,7 +1,7 @@
-{{ define "header" }}
+
+{{ block "header" . }}
 {{ end }}
 
-{{ define "main" }}
-<h2>List Template</h2>
+{{ block "main" . }}
 {{ .Content }}
-{{ end }}
+{{ end }}  
